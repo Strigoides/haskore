@@ -1,6 +1,5 @@
 import System (getArgs)
+import Control.Monad
 
 -- Echo argv to stdout
-main = do
-	args <- getArgs
-	putStrLn $ unwords args
+main = putStrLn . unwords =<< getArgs

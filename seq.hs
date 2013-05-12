@@ -3,7 +3,7 @@ import System.Exit
 
 main = do
 	args <- getArgs
-	let len = length $ args in
+	let len = length args in
 		if len > 2 || len == 0
 			then do
 				putStrLn "Wrong number of args"

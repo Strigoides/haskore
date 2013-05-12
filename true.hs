@@ -1,3 +1,3 @@
 import System.Exit
 
-main = exitWith $ ExitSuccess
+main = exitWith ExitSuccess

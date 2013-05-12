@@ -9,7 +9,7 @@ primeFactors n = m : primeFactors (n `quot` m)
 printFactors :: Int -> IO ()
 printFactors n = do
     putStr   $ show n ++ ": "
-    putStrLn $ intercalate " " $ map show $ primeFactors n
+    putStrLn $ unwords $ map show $ primeFactors n
 
 main = do
     args <- getArgs

@@ -1,3 +1,3 @@
 import System.Exit
 
-main = exitWith $ ExitFailure 1
+main = exitFailure

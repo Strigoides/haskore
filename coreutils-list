@@ -21,7 +21,7 @@ List of coreutils programs
   df
   dir
   dircolors
-  dirname
+! dirname
   du
 ! echo
   env

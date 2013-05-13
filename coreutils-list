@@ -27,7 +27,7 @@ List of coreutils programs
   env
   expand
   expr
-* factor
+! factor
 ! false
   flock
   fmt

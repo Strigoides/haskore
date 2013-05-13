@@ -12,7 +12,9 @@ printFactors n = do
     putStrLn $ unwords $ map show $ primeFactors n
 
 main = do
-    args <- getArgs
-    if null args
-        then putStrLn "Invalid number of arguments"
-        else mapM_ (printFactors . read) args
+    args  <- getArgs
+    input <- getContents
+    mapM_ (printFactors . read) $
+        if null args
+           then lines input
+           else args

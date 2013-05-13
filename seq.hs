@@ -7,7 +7,7 @@ main = do
         if len > 2 || len == 0
             then do
                 putStrLn "Wrong number of args"
-                exitWith $ ExitFailure 1
+                exitFailure
             else mapM_ print $
                 if len == 1
                     then [1.. read $ head args]

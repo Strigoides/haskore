@@ -5,7 +5,7 @@ List of coreutils programs
   arch
   base64
 ! basename
-  cat
+* cat
   chcon
   chgrp
   chmod

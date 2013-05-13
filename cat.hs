@@ -5,4 +5,7 @@ main = do
     args <- getArgs
     if null args
        then putStr =<< getContents
-       else mapM_ (readFile >=> putStr) args
+       else mapM_ printFile args
+           where
+             printFile "-"  = putStr =<< getContents
+             printFile file = putStr =<< readFile file

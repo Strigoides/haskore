@@ -1,10 +1,9 @@
-import System (getArgs)
+import System.Environment
 import System.IO
 
--- Read the first n lines of a file or stdin
 main = do
     args <- getArgs
-    input <- if null args
-                then getContents
-                else readFile $ head args
-    mapM_ putStrLn $ take 10 $ lines input
+    mapM_ putStrLn . take 10 . lines =<<
+        if null args
+           then getContents
+           else readFile $ head args

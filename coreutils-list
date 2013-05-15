@@ -50,7 +50,7 @@ x dir
   mktemp
   mv
   nice
-  nl
+* nl
   nohup
   nproc
   od

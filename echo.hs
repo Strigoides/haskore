@@ -1,5 +1,3 @@
-import System (getArgs)
-import Control.Monad
+import System.Environment
 
--- Echo argv to stdout
 main = putStrLn . unwords =<< getArgs

@@ -6,11 +6,11 @@ import Numeric
 main = putStr . encode =<< getContents
 
 b64Char  :: Int -> Char
-b64Char  = fromJust . (flip lookup $
-    (zip [0 ..25] ['A'..'Z']) ++
-    (zip [26..51] ['a'..'z']) ++
-    (zip [52..61] ['0'..'9']) ++
-    (zip [62..63] "+/"))
+b64Char  = fromJust . flip lookup
+    (zip [0 ..25] ['A'..'Z'] ++
+     zip [26..51] ['a'..'z'] ++
+     zip [52..61] ['0'..'9'] ++
+     zip [62..63] "+/")
 
 unConcat :: Int -> [a] -> [[a]]
 unConcat _ [] = []
@@ -27,7 +27,7 @@ pad xs
     where len = length xs
 
 binList  :: String -> [Int]
-binList   = concatMap (pad . (map digitToInt) . intToBin . ord)
+binList   = concatMap (pad . map digitToInt . intToBin . ord)
 
 binToDec :: [Int] -> Int
 binToDec  = sum . map (2^) . elemIndices 1 . reverse

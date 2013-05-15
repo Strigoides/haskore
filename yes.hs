@@ -1,8 +1,9 @@
-import System (getArgs)
+import System.Environment
+import Control.Monad
 
 main = do
     args <- getArgs
-    mapM_ putStrLn $ repeat $
+    forever $ putStrLn $
         if null args
             then "y"
             else unwords args

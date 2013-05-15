@@ -1,7 +1,5 @@
 import System.Directory
 import Data.List
 
--- List all files in the current directory
-main = do
-    list <- getDirectoryContents "."
-    putStrLn $ unwords $ sort $ filter ((/= '.') . head) list
+main = putStrLn . unwords . sort .
+    filter ((/= '.') . head) =<< getDirectoryContents "."

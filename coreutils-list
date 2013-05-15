@@ -1,6 +1,7 @@
 List of coreutils programs
 ! = Fully     completed
 * = Partially completed
+x = Won't implement
 
   arch
 * base64
@@ -19,7 +20,7 @@ List of coreutils programs
   date
   dd
   df
-  dir
+x dir
   dircolors
 ! dirname
   du
@@ -91,7 +92,7 @@ List of coreutils programs
   uniq
   unlink
   users
-  vdir
+x vdir
   wc
   who
   whoami

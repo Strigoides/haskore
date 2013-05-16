@@ -93,7 +93,7 @@ x dir
   unlink
   users
 x vdir
-  wc
+* wc
   who
   whoami
 ! yes

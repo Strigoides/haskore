@@ -58,7 +58,7 @@ x dir
   pathchk
   pinky
   pr
-  printenv
+* printenv
   printf
   ptx
   pwd

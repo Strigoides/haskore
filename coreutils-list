@@ -14,7 +14,7 @@ x = Won't implement
   chroot
   cksum
   comm
-  cp
+* cp
   csplit
   cut
   date

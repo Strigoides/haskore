@@ -41,7 +41,7 @@ x dir
   join
   link
   ln
-  logname
+! logname
 * ls
   md5sum
   mkdir

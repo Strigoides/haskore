@@ -1,6 +1,3 @@
-wrapTo :: Int -> [a] -> [[a]]
-wrapTo _ [] = []
-wrapTo n xs = a : wrapTo n b
-    where (a, b) = splitAt n xs
+import Utils.List
 
-main = mapM_ (mapM_ putStrLn . wrapTo 80) . lines =<< getContents
+main = mapM_ (mapM_ putStrLn . unConcat 80) . lines =<< getContents

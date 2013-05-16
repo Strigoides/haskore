@@ -2,6 +2,7 @@ import Data.Char
 import Data.List
 import Data.Maybe
 import Numeric
+import Utils.List
 
 main = putStr . encode =<< getContents
 
@@ -11,11 +12,6 @@ b64Char  = fromJust . flip lookup
      zip [26..51] ['a'..'z'] ++
      zip [52..61] ['0'..'9'] ++
      zip [62..63] "+/")
-
-unConcat :: Int -> [a] -> [[a]]
-unConcat _ [] = []
-unConcat n xs = x : unConcat n y
-    where (x, y) = splitAt n xs
 
 intToBin :: Int -> String
 intToBin  = flip (showIntAtBase 2 intToDigit) ""

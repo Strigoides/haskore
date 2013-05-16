@@ -3,7 +3,7 @@ List of coreutils programs
 * = Partially completed
 x = Won't implement
 
-  arch
+! arch
 * base64
 ! basename
 * cat

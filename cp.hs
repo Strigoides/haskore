@@ -1,11 +1,12 @@
 import System.Directory
 import System.Environment
 import System.Exit
+import Utils.Error
 
 main = do
     args <- getArgs
     if length args < 2
-       then putStrLn "Not enough args" >> exitFailure
+       then errorMessage "Not enough args"
        else do
            let dest  = last args
            let files = init args
@@ -14,5 +15,4 @@ main = do
               then mapM_ (\s -> copyFile s (dest ++ "/" ++ s)) files
               else if length files == 1
                       then copyFile (head files) dest
-                      else putStrLn (dest ++ " is not a directory") >>
-                          exitFailure
+                      else errorMessage $ dest ++ " is not a directory"

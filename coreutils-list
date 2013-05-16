@@ -61,7 +61,7 @@ x dir
 * printenv
   printf
   ptx
-  pwd
+* pwd
   readlink
   rm
   rmdir

@@ -1,4 +1,5 @@
 import Control.Concurrent
 import System.Environment
+import Utils.Units
 
-main = threadDelay . (* 1000000) . sum . map read =<< getArgs
+main = threadDelay . sum . map toMicro =<< getArgs

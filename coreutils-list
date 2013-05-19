@@ -69,7 +69,7 @@ x dir
   sha*sum
 * seq
   shred
-* sleep
+! sleep
 * sort
   split
   stat

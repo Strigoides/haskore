@@ -29,4 +29,4 @@ binToDec :: [Int] -> Int
 binToDec  = sum . map (2^) . elemIndices 1 . reverse
 
 encode   :: String -> String
-encode cs = map (b64Char . binToDec) $ unConcat 6 (binList cs)
+encode = map (b64Char . binToDec) . unConcat 6 . binList
